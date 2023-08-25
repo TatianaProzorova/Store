@@ -110,15 +110,13 @@ namespace Store
             switch (numberAction)
             {
                 case 1: onlineStore.ShowCatalog(); break;
-                default:
-                    Console.WriteLine("Выберите номер действия из списка");
-                    break;
+                default: Console.WriteLine("Выберите номер действия из списка"); break;
             }
 
             bool yes;
             do
             {
-                Console.WriteLine("Хотите добавить продукт в корзину? Наберите Да или Нет.");
+                Console.WriteLine("Хотите добавить продукт в корзину? Y/N");
                 yes = IsYes(Console.ReadLine());
                 if (yes)
                 {
@@ -129,14 +127,14 @@ namespace Store
                 }
             } while (yes);
 
-            Console.WriteLine("Хотите посмотреть корзину? Наберите Да или Нет.");
+            Console.WriteLine("Хотите посмотреть корзину? Y/N");
             yes = IsYes(Console.ReadLine());
             if (yes)
             {
                 onlineStore.ShowBasket();
             }
 
-            Console.WriteLine("Хотите оформить заказ? Наберите Да или Нет.");
+            Console.WriteLine("Хотите оформить заказ? Y/N");
             yes = IsYes(Console.ReadLine());
             if (yes)
             {
@@ -146,7 +144,7 @@ namespace Store
 
         static bool IsYes(string answer)
         {
-            return answer.ToLower() == "да";
+            return answer.ToLower() == "Y";
         }
     }
 }
