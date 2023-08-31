@@ -9,7 +9,10 @@ namespace Store
             Store onlineStore = new Store();
 
             Console.WriteLine("Здравствуйте. Выберите действие:");
-            Console.WriteLine("1. Показать каталог продуктов?");
+            Console.WriteLine("1. Показать каталог продуктов");
+            Console.WriteLine("2. Добавить продукт в корзину");
+            Console.WriteLine("3. Показать корзину");
+            Console.WriteLine("4. Оформить заказ");
             Console.WriteLine("Выберите номер действия, которое хотите совершить.");
             int numberAction = Convert.ToInt32(Console.ReadLine());
 
