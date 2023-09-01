@@ -50,7 +50,7 @@ namespace Store
             yes = IsYes(Console.ReadLine());
             if (yes)
             {
-                onlineStore.CreateOrder();
+                onlineStore.PutOrder();
             }
         }
 
