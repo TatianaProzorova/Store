@@ -19,6 +19,9 @@ namespace Store
             switch (numberAction)
             {
                 case 1: onlineStore.ShowCatalog(); break;
+                case 2: onlineStore.AddToBasket(123456); break;
+                case 3: onlineStore.ShowBasket(); break;
+                case 4: onlineStore.PutOrder(); break;
                 default: Console.WriteLine("Выберите номер действия из списка"); break;
             }
 

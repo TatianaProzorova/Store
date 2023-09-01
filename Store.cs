@@ -56,7 +56,7 @@ namespace Store
             }
         }
 
-        public void CreateOrder()
+        public void PutOrder()
         {
             Order order = new Order(Basket);
             Orders.Add(order);
