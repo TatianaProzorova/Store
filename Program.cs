@@ -19,7 +19,7 @@ namespace Store
             switch (numberAction)
             {
                 case 1: onlineStore.ShowCatalog(); break;
-                case 2: onlineStore.AddToBasket(123456); break;
+                case 2: onlineStore.AddToBasket(1); break;
                 case 3: onlineStore.ShowBasket(); break;
                 case 4: onlineStore.PutOrder(); break;
                 default: Console.WriteLine("Выберите номер действия из списка"); break;
@@ -33,7 +33,7 @@ namespace Store
                 if (yes)
                 {
                     onlineStore.ShowCatalog();
-                    Console.WriteLine("Напишите номер продукта, которого нужно добавить в корзину");
+                    Console.WriteLine("Напишите номер продукта, который нужно добавить в корзину");
                     int productNumber = Convert.ToInt32(Console.ReadLine());
                     onlineStore.AddToBasket(productNumber);
                 }
@@ -56,7 +56,8 @@ namespace Store
 
         static bool IsYes(string answer)
         {
-            return answer.ToLower() == "Y";
+            var result = answer.ToLower() == "Y";
+            return result;
         }
     }
 }
